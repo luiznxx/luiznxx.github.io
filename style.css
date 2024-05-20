@@ -1,0 +1,282 @@
+:root {
+    /* colors */
+    --primary:  #6C63FF;
+    --secondary: #000000;
+    --grey: #c4c4c4;
+    --white: #ffffff;
+}
+
+/* CSS RESET */
+*::before,
+*,
+*::after {
+   font-family: Poppins,sans-serif;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   list-style: none;
+}
+*:focus-visible {
+    outline: 4px solid var(--primary);
+}
+::selection {
+    background: var(--primary);
+    color: var(--white);
+}
+body {
+    background: var(--white);
+    color: var(--secondary);
+    font-size: 1.125rem;
+    font-weight: 200;
+    font-style: normal;
+}
+/* CSS RESET */
+
+
+/* Utilitary classes */
+.text-bold {
+    color: var(--primary);
+}
+.text-accent {
+    color: var(--primary);
+}
+.title{
+    font-size: clamp(2.25rem, 6vw, 3rem);
+    text-align: center;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+}
+.pattern {
+    content: '';
+    position: absolute;
+    width: clamp(230px, 20vw, 500px);
+    height: 295px;
+    top: 0;
+    right: -1.5rem;
+    background: url();
+}
+/* CSS RESET */
+
+
+/* header */
+.header {
+    padding-top: 1.5rem;
+    text-align: center;
+}
+.logo a {
+    color: var(--secondary);
+}
+.menu ul{
+    margin-top: 2.375rem;
+}
+.menu ul li + li {
+    margin-top: 1rem;
+}
+.menu ul a {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    transition: 0.25s ease-in-out color;
+    will-change: color;
+}
+.menu ul a:hover {
+    color: var(--primary);
+}
+/* header */
+
+
+/* hero */
+.hero {
+    padding-top: 4.375rem;
+}
+.hero h2 {
+    text-align: center;
+    max-width: 12ch;
+    margin: 0 auto;
+}
+.hero img {
+    margin-top: 2rem;
+    height: auto;
+    max-width: 100%;
+}
+/* hero */
+
+
+/* questions */
+.questions {
+    padding-top: 4.375rem;
+}
+.questions p {
+    display: none;
+}
+.questions form {
+    margin-top: 4.375rem;
+    width: 100%;
+}
+.questions input {
+    border: 2px solid var(--primary);
+    border-radius: 1rem;
+    box-shadow: 0 4px 4px o rgba(0, 0, 0, 25%);
+    display: block;
+    padding: 1.375rem 0 1.375rem 1.375rem;
+    width: 100%;
+    color: var(--secondary);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+.questions input::placeholder {
+    color: var(--secondary);
+    font-size: 1.125rem;
+}
+.questions input + input{
+    margin-top: 1.6875rem;
+}
+input:focus-visible {
+    outline-width: 2px;
+}
+.btn {
+    background: var(--secondary);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.375rem;
+    padding: 1rem 4rem;
+    transition: 
+    0.25s ease-in-out background,
+    0.25s ease-in-out color;
+  will-change: background, color;
+}
+.btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+/* questions */
+
+
+/* footer */
+.footer {
+    background: var(--primary);
+    font-weight: 700;
+    padding: 2.5rem 0;
+    margin-top: calc(4.375rem *2);
+    text-align: center;
+}
+.footer h2{
+    font-size: calc(3rem, 7vw, 4rem);
+}
+.footer ul {
+    margin-top: 3.5rem;
+}
+.footer a {
+    color: var(--secondary);
+    font-size: 1.875rem;
+    transition: 0.25s ease-in-out color;
+    will-change: color;
+}
+.footer a:hover {
+    color: var(--white);
+}
+/* footer */
+
+
+@media(min-width: 768px) {
+    /* header */
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu ul {
+        margin: 0;
+        display: flex;
+    }
+    .menu ul li + li {
+        margin: 0;
+        margin-left: 1.875rem;
+    }
+    /* header */
+    }
+
+    @media (min-whidth: 1024px) {
+        /* header */
+        .header {
+            padding-top: 3.75rem;
+        }
+    /* header */
+
+
+    /* hero */
+    .hero {
+        padding-top: 13.4375;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .hero img {
+        order: -1;
+        margin-top: 0;
+    }
+    /* hero */
+
+
+    /* questions */
+    .questions{
+        padding-top: 11.625rem;
+    }
+    .questions-box {
+        padding-top: 7.75rem;
+        display: flex;
+        gap: clamp(2rem, 6vw, 3.75rem);
+        justify-content: center;
+    }
+    .questions form {
+        width: 50%;
+        margin: 0;
+    }
+    .questions input {
+        padding: 1rem 0 1rem 2rem;
+    }
+    .questions p {
+        border: 2px solid var(--secondary);
+        border-radius: 0.3125rem;
+        display: block;
+        max-width: 35ch;
+        padding: 1.5rem;
+        text-align: center;
+        width: 50%;
+    }
+    .btn {
+        margin-top: 6.875rem;
+        padding: 1rem;
+        width: 50%;
+    }
+   /* questions */
+
+
+   /* footer */
+   .footer{
+     margin-top: 19.25rem;
+     padding: 7.125rem 0;
+   }
+   .footer-box {
+     align-items: center;
+     display: flex;
+     justify-content: space-between;
+   }
+   .footer-box h2 {
+    order: 2;
+   }
+   .footer-box ul {
+    margin: 0;
+   }
+   /* footer */
+   }
